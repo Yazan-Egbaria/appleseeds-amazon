@@ -1,0 +1,40 @@
+/* XL - Extra large devices (large desktops, 1200px and down)*/
+/* @media screen and (max-width: 1200px) { 
+
+} */
+
+/* LG - Large devices (desktops, 992px and down)*/
+/* @media screen and (max-width: 992px) { 
+    
+} */
+
+
+/* MD - Medium devices (tablets, 768px and down)*/
+@media screen and (max-width: 768px) { 
+    .product {
+        flex-direction: column;
+    }
+
+    #burgerMenu {
+        display: block;
+        color: white;
+        font-size: 18px;
+    }
+    
+    .top-bar .middle-nav,
+    .top-bar .right-nav,
+    .top-bar .left-nav .location {
+        display: none;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+}
+
+/* SM - Small devices (landscape phones, 576px and down)*/
+@media screen and (max-width: 576px) {
+    .product-content {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,561 @@
+body {
+    width: 100%;
+    font-family: 'Amazon Ember', sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    background: #131921;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 2rem;
+}
+
+#burgerMenu {
+    display: none;
+}
+
+/* left nav */
+
+.top-bar .left-nav,
+.top-bar .middle-nav,
+.top-bar .right-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.left-nav a img {
+    max-width: 100px;
+}
+
+.left-nav .location {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.location i {
+    color: white;
+}
+
+.location .address {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.address .deliverToName {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+
+.address .addressTitle  {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+/* middle nav */
+
+.top-bar .middle-nav {
+    gap: 0;
+    flex: 2;
+}
+
+.middle-nav .all,
+.middle-nav .search,
+.middle-nav .search-bar {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.middle-nav .all,
+.middle-nav .search {
+    background: #e6e6e6;
+    padding: 0 12px;
+    border-radius: 4px 0 0 4px;
+    color: #0f1111;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.all p {
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.all:hover p {
+    opacity: 1;
+}
+
+.all:hover {
+    background: #d3d3d3;
+}
+
+.all i {
+    margin-left: 4px;
+}
+
+.middle-nav .search {
+    background: #febd69;
+    border-radius: 0 4px 4px 0;
+    color: #131921;
+}
+
+.search:hover {
+    background: #f3a847;
+}
+
+.middle-nav .search-bar {
+    padding: 0 12px;
+    border: none;
+    color: #0f1111;
+    flex: 2;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-bar:placeholder-shown {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* right nav */
+
+.top-bar .right-nav {
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.right-nav .section {
+    color: white;
+}
+
+.right-nav .semiPara {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.right-nav .semiTitle  {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.semiTitle i {
+    margin-left: 4px;
+    color: #d3d3d3;
+}
+
+/* nav-bar */
+
+.nav-bar {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    background: #232f3e;
+    padding: 12px 16px;
+}
+
+.nav-bar a,
+.nav-bar a p,
+.nav-bar a p i {
+    font-size: 14px;
+    color: white;
+}
+
+.unique p {
+    font-weight: bold;
+}
+
+/* bottom-bar */
+
+.bottom-bar {
+    background: #d8f7eb;
+    color: #0f1111;
+    padding: 8px 16px;
+}
+
+.bottom-bar p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* main */
+
+main {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.links {
+    margin: 8px 0;
+}
+
+.links a, 
+.links span {
+    color: #565959;
+    font-size: 12px;
+}
+
+.links span {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* product */
+
+.product {
+    padding-top: 12px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* product images */
+
+.product-images {
+    display: flex;
+    flex: 1;
+}
+
+.product-images .images-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.thumbnailImage {
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid #0f111150;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.outline {
+    outline: 3px solid #007185;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.outlineHover:hover {
+    outline: 3px solid #007185;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.main-image {
+    z-index: -1;
+}
+
+/* product content */
+
+.product-content {
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.main-content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid #cecece;
+}
+
+.main-content-header h1 {
+    color: #0f1111;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.main-content-header a {
+    color: #007185;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.main-content-header a:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+.main-content-header-ratings {
+    display: flex;
+    gap: 16px;
+}
+
+.main-content-header-ratings p {
+    color: #0f1111;
+    font-size: 14px;
+}
+
+.main-content-header-ratings span {
+    color: #f08804;
+    font-size: 14px;
+}
+
+.ratings-links {
+    display: flex;
+    gap: 8px;
+}
+
+.buyers {
+    color: #0B0C0C;
+    font-size: 12px;
+}
+
+.descriptionOne,
+.descriptionTwo {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid #cecece;
+}
+
+.color {
+    font-size: 14px;
+    color: #565959;
+}
+
+.color span {
+    font-weight: bold;
+    color: #0f1111;
+}
+
+.macImages {
+    display: flex;
+    gap: 8px;
+}
+
+.macImgPrc {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border: 0.5px solid #cecece;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.macImgPrc.active {
+    border: 2px solid #007185;
+}
+
+.macbookPrice {
+    font-size: 12px;
+    color: #565959;
+}
+.macbookPrice.active {
+    color: #c7511f;
+    font-weight: bold;
+}
+
+table {
+    border: none;
+    width: 40%;
+    border-spacing: 0 10px;
+}
+
+td {
+    vertical-align: baseline;
+}
+
+.titleHeader {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0f1111;
+}
+
+.titleDescription {
+    font-size: 14px;
+    color: #0f1111;
+}
+
+.descriptionTwo h2 {
+    font-size: 16px;
+    color: #0f1111;
+    font-weight: bold;
+}
+
+.descriptionTwo ul {
+    list-style:disc;
+}
+
+.descriptionTwo li {
+    font-size: 14px;
+    color: #0f1111;
+    margin-top: 8px;
+}
+
+/* aside */
+
+.aside {
+    border: 0.5px solid #cecece;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: fit-content;
+}
+
+.price {
+    color: #0f1111;
+    font-size: 28px;
+}
+
+.price sup {
+    font-size: 13px;
+}
+
+.fees-delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.fees {
+    color: #565959;
+    font-size: 14px;
+}
+
+.link {
+    color: #007185;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.linkXS {
+    color: #007185;
+    font-size: 12px;
+    width: fit-content;}
+
+.link:hover,
+.linkXS:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+.dateTime {
+    font-size: 14px;
+    color: #0f1111;
+}
+
+.dateTime .date {
+    font-weight: bold;
+}
+
+.dateTime .time {
+    color: #007600;
+}
+
+.stock {
+    color: #007600;
+    font-size: 18px;
+}
+
+#quantity {
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 0.5px solid #cecece;
+    color: #0f1111;
+}
+
+.callToActions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.callToActions a {
+    width: 100%;
+    padding: 8px 12px;
+    color: #0f1111;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 13px;
+}
+
+#addToCart {
+    background: #ffd815;
+}
+
+#buyNow {
+    background: #ffa41c;
+}
+
+.smallTitles {
+    display: flex;
+}
+
+.firstTitles,
+.secondaryTitles {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+
+}
+
+.firstTitles p {
+    font-size: 12px;
+    color: #565959;
+}
+
+.secondaryTitles p {
+    font-size: 12px;
+    color: #0f1111;
+}
+
+#gift {
+    color: #0f1111;
+    font-size: 14px;
+}
+
+.checkbox {
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid #cecece;
+}
+
+#addToList {
+    width: 100%;
+    border: 0.5px solid #0f1111;
+    color: #0f1111;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
